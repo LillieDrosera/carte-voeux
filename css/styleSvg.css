@@ -19,16 +19,13 @@ svg{
 }
 
 
-/* ==================== flip effect ==================== */
 
-/* hide back of pane during swap */
 .elemFlipped {
 	backface-visibility: hidden;
 	opacity:0;
 
 	animation: flipElem 0.5s ease-in 0s ;
 	animation-fill-mode: forwards;
-/*	transition: 1s;*/
 	transform-origin: 25% 50%;
 }
 
@@ -54,14 +51,6 @@ svg{
 	animation-delay: 1.0s; 
 }
 
-/*@keyframes flipElem {
-	0% { transform: rotateY(0deg); }
-	25% {  transform: rotateY(90deg);fill: grey; }
-	50% { transform: rotateY(180deg); fill: white;}
-	75% {  transform: rotateY(90deg);fill: grey; }
-	100% { transform: rotateY(0deg);  }
-}
-*/
 
 @keyframes flipElem {
 	0% { transform: scaleX(1); opacity:0;}
@@ -79,20 +68,19 @@ svg{
 	100% { transform: rotate(90deg);}
 }
 
-#blink{
-	animation: blinkEye 0.5s ease-in 2.3s ;
+#leftEyeBlinking{
+opacity: 0;
+	animation: blinkEye 0.5s linear 2.3s ;
 	animation-fill-mode: backwards;	
 }
+
+
 @keyframes blinkEye {
-	0% { shape-inside: polygon(677.374,465.197 674.25,465.197 670.875,465.197 661.875,465.197 658.739,465.197 658.739,440.174 683.763,440.174 683.763,465.197 680.75,465.197);  
-		-webkit-clip-path: polygon(677.374,465.197 674.25,465.197 670.875,465.197 661.875,465.197 658.739,465.197 658.739,440.174 683.763,440.174 683.763,465.197 680.75,465.197);
-		}
+	0% {opacity: 0;}
+	15% {opacity: 100;}
+	85% {opacity: 100;}
+	100% {opacity: 0;}
 
-	100% { shape-inside: polygon(663.378,500.598 657.274,491.199 667.528,482.225 671.19,465.197 658.739,465.197 658.739,440.174 683.763,440.174 683.763,465.197 678.88,487.475);
-		-webkit-clip-path: polygon(663.378,500.598 657.274,491.199 667.528,482.225 671.19,465.197 658.739,465.197 658.739,440.174 683.763,440.174 683.763,465.197 678.88,487.475);
-		}
+
 }
-
-
-/* ==================== END flip effect ==================== */
 
