@@ -1,0 +1,98 @@
+.front{
+	background-color: #e61d25;
+	height:98vh;
+	overflow: hidden;
+
+}
+.flipper {
+	height:98vh;
+}
+svg{
+	margin: auto;
+}
+
+#santa{
+	fill:#fff;
+}
+#santaBack{
+	mix-blend-mode: multiply;
+}
+
+
+/* ==================== flip effect ==================== */
+
+/* hide back of pane during swap */
+.elemFlipped {
+	backface-visibility: hidden;
+	opacity:0;
+
+	animation: flipElem 0.5s ease-in 0s ;
+	animation-fill-mode: forwards;
+/*	transition: 1s;*/
+	transform-origin: 25% 50%;
+}
+
+#pom, #pomBack{
+	animation-delay: 0.4s; 
+}
+#hat, #hatBack{
+	animation-delay: 0.5s; 
+}
+#fur, #furBack{
+	animation-delay: 0.6s; 
+}
+#eyes, #eyesBack{
+	animation-delay: 0.7s; 
+}
+#mustache, #mustacheBack{
+	animation-delay: 0.8s; 
+}
+#smile, #smileBack{
+	animation-delay: 0.9s; 
+}
+#beard, #beardBack{
+	animation-delay: 1.0s; 
+}
+
+/*@keyframes flipElem {
+	0% { transform: rotateY(0deg); }
+	25% {  transform: rotateY(90deg);fill: grey; }
+	50% { transform: rotateY(180deg); fill: white;}
+	75% {  transform: rotateY(90deg);fill: grey; }
+	100% { transform: rotateY(0deg);  }
+}
+*/
+
+@keyframes flipElem {
+	0% { transform: scaleX(1); opacity:0;}
+	50% { transform: scaleX(-1); opacity:100; fill: white;}
+	75% { transform: scaleX(0); fill: grey; opacity:100;}
+	100% { transform: scaleX(1); opacity:100;}	
+}
+
+.flipper{
+	animation: rotateSanta 0.5s ease-in 1.5s ;
+	animation-fill-mode: forwards;	
+}
+@keyframes rotateSanta {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(90deg);}
+}
+
+#blink{
+	animation: blinkEye 0.5s ease-in 2.3s ;
+	animation-fill-mode: backwards;	
+}
+@keyframes blinkEye {
+	0% { shape-inside: polygon(677.374,465.197 674.25,465.197 670.875,465.197 661.875,465.197 658.739,465.197 658.739,440.174 683.763,440.174 683.763,465.197 680.75,465.197);  
+		-webkit-clip-path: polygon(677.374,465.197 674.25,465.197 670.875,465.197 661.875,465.197 658.739,465.197 658.739,440.174 683.763,440.174 683.763,465.197 680.75,465.197);
+		}
+
+	100% { shape-inside: polygon(663.378,500.598 657.274,491.199 667.528,482.225 671.19,465.197 658.739,465.197 658.739,440.174 683.763,440.174 683.763,465.197 678.88,487.475);
+		-webkit-clip-path: polygon(663.378,500.598 657.274,491.199 667.528,482.225 671.19,465.197 658.739,465.197 658.739,440.174 683.763,440.174 683.763,465.197 678.88,487.475);
+		}
+}
+
+
+/* ==================== END flip effect ==================== */
+
