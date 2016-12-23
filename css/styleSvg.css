@@ -1,23 +1,35 @@
 .front{
 	background-color: #e61d25;
-	height:98vh;
+	height:97vh;
 	overflow: hidden;
 
 }
 .flipper {
-	height:98vh;
+	height:97vh;
+}
+.vert{
+	background-color: #2b9300;
+	height: 100vh;
 }
 svg{
 	margin: auto;
+	height: 95vh;
+	width: 100vw;
 }
+form{
+	margin-left: 80%;
+	height: 5vh;
+}
+
 
 #santa{
 	fill:#fff;
 }
-#santaBack{
+
+/*#santaBack{
 	mix-blend-mode: multiply;
 }
-
+*/
 
 
 .elemFlipped {
@@ -80,7 +92,42 @@ opacity: 0;
 	15% {opacity: 100;}
 	85% {opacity: 100;}
 	100% {opacity: 0;}
-
-
 }
 
+.joyeusesFetes{
+	animation: santaToGreetings 0.8s ease-out 2.8s ;
+	animation-fill-mode: forwards;	
+	transform-origin: 38% 60%;
+}
+
+@keyframes santaToGreetings {
+	100% {transform: translate(0,-100vh);}
+}
+
+#textFront{
+	margin: auto;
+	animation: shadows2 0.8s ease-out 2.8s ;
+	animation-fill-mode: forwards;	
+	transform-origin: 50% 50%;
+/*	animation-fill-mode: forwards;	
+	*/
+}
+@keyframes shadows2 {
+	0% { transform: rotate(0deg);}
+	100% { transform:  rotate(-20deg);}
+}
+#textBack{
+	margin: auto;
+
+	animation: shadows 0.8s ease-out 2.8s ;
+	mix-blend-mode: multiply;
+	animation-fill-mode: forwards;	
+	transform-origin: 50% 50%;
+
+/*	animation-fill-mode: forwards;	
+	transform-origin: 50% 50%;*/
+}
+@keyframes shadows {
+	0% {opacity: 0; transform: scale(1) rotate(0deg);}
+	100% {opacity: 0.2; transform: scale(1.03) rotate(-20deg);}
+}
