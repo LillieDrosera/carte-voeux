@@ -1,0 +1,158 @@
+/* ANIMATION DES ELEMENTS =============================================================*/
+
+#slide2{
+	animation-name: translationX;
+	animation-timing-function: ease-in-out;
+	animation-duration: 1.5s;
+	animation-delay: 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes translationX{
+ 0%{	left:100vw; 			}
+ 100%{	left:0; 		}
+}
+
+#slide3{
+	animation-name: translationY;
+	animation-timing-function: ease-in-out;
+	animation-duration: 2.5s;
+	animation-delay: 5s;
+	animation-fill-mode: forwards;
+}
+#slide4{
+	animation-name: translationY;
+	animation-timing-function: ease-in-out;
+	animation-duration: 2.5s;
+	animation-delay: 10s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes translationY{
+ 0%{	top:100vh; 	}
+ 100%{	top:0; 		}
+}
+
+
+/* ANIMATION DES ELEMENTS =============================================================*/
+#gedn-logo {
+   width: 50vw;
+   height: 40vh;
+   position: absolute;
+   animation-name: logo-move;
+   animation-duration: 1s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes logo-move {
+   0% {
+       transform: translateX(200%);
+   }
+   50% {
+       transform: translateX(120%);
+   }
+   100% {
+       transform: translate(120%, 130%);
+   }
+}
+
+.elemFlipped {
+	backface-visibility: hidden;
+	opacity:0;
+
+	animation: flipElem 0.5s ease-in 2s ;
+	animation-fill-mode: forwards;
+	transform-origin: 25% 50%;
+}
+
+#pom, #pomBack{
+	animation-delay: 2.4s; 
+}
+#hat, #hatBack{
+	animation-delay: 2.5s; 
+}
+#fur, #furBack{
+	animation-delay: 2.6s; 
+}
+#eyes, #eyesBack{
+	animation-delay: 2.7s; 
+}
+#nose, #noseBack{
+	animation-delay: 2.8s; 
+}
+#smile, #smileBack{
+	animation-delay: 2.9s; 
+}
+#beard, #beardBack{
+	animation-delay: 3.0s; 
+}
+
+
+@keyframes flipElem {
+	0% { transform: scaleX(1); opacity:0;}
+	50% { transform: scaleX(-1); opacity:100; fill: white;}
+	75% { transform: scaleX(0); fill: grey; opacity:100;}
+	100% { transform: scaleX(1); opacity:100;}	
+}
+
+.flipper{
+	animation: rotateSanta 0.5s ease-in 3.5s ;
+	animation-fill-mode: forwards;	
+}
+@keyframes rotateSanta {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(90deg);}
+}
+
+#leftEyeBlinking{
+opacity: 0;
+	animation: blinkEye 0.5s linear 2.3s ;
+	animation-fill-mode: backwards;	
+}
+
+
+@keyframes blinkEye {
+	0% {opacity: 0;}
+	15% {opacity: 100;}
+	85% {opacity: 100;}
+	100% {opacity: 0;}
+}
+
+.joyeusesFetes{
+	position: relative;
+	animation: santaToGreetings 0.8s ease-out 4.8s ;
+	animation-fill-mode: forwards;	
+	transform-origin: 38% 60%;
+}
+
+@keyframes santaToGreetings {
+	100% {transform: translate(0,-110vh);}
+}
+
+#textFront{
+	margin: auto;
+	animation: shadows2 0.8s ease-out 2.8s ;
+	animation-fill-mode: forwards;	
+	transform-origin: 50% 50%;
+/*	animation-fill-mode: forwards;	
+	*/
+}
+@keyframes shadows2 {
+	0% { transform: rotate(0deg);}
+	100% { transform:  rotate(-20deg);}
+}
+#textBack{
+	margin: auto;
+
+	animation: shadows 0.8s ease-out 2.8s ;
+	mix-blend-mode: multiply;
+	animation-fill-mode: forwards;	
+	transform-origin: 50% 50%;
+
+/*	animation-fill-mode: forwards;	
+	transform-origin: 50% 50%;*/
+}
+@keyframes shadows {
+	0% {opacity: 0; transform: scale(1) rotate(0deg);}
+	100% {opacity: 0.2; transform: scale(1.03) rotate(-20deg);}
+}

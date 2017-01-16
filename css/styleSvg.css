@@ -1,19 +1,83 @@
-.front{
-	background-color: #e61d25;
-	height:97vh;
+@font-face {
+  font-family: "PixelOperatorMono-Bold";
+  src: url("font/PixelOperatorMono-Bold.ttf");
+}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	font-family: "PixelOperatorMono-Bold";
 	overflow: hidden;
+	position: relative;
+}
+
+.slide {
+	height:100vh;
+	width:100vw;
+	overflow: hidden;
+	vertical-align: center;
+	text-align: center;
+	position: absolute;
+}
+
+#slide1{
+	background-color: #000;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	/*animation: transitionAB 1s ease-out 2.5s ;
+	animation-fill-mode: forwards;	
+	transform-origin: 50% 50%;*/
+}
+
+
+#slide2{
+	background-color: #3fa9f5;
+	top: 0;
+	left: 100vw;
+	z-index: 20;
+
+
+/*	animation: transitionBC 1s ease-out 2s ;
+	animation-fill-mode: forwards;	
+	transform-origin: 50% 50%;*/
 
 }
+
+#slide3{
+	background-color: #ff931e;
+	top: 100vh;
+	left: 0;
+	z-index: 30;
+
+}
+
+
+#slide4{
+	background-color: #ff1d25;
+	top: 100vh;
+	left:0;
+	z-index: 40;
+
+}
+
+
+#slide1 text{
+	font-family: "PixelOperatorMono-Bold";
+	font-size: 200;
+	 
+}
+
 .flipper {
-	height:97vh;
+	height:100vh;
+	transform-origin: 50% 50%;
 }
-.vert{
-	background-color: #2b9300;
-	height: 100vh;
-}
+
 svg{
 	margin: auto;
-	height: 95vh;
+	height: 100vh;
 	width: 100vw;
 }
 form{
@@ -21,113 +85,13 @@ form{
 	height: 5vh;
 }
 
+#text1{
+
+}
 
 #santa{
 	fill:#fff;
+	width: 50%;
+	
 }
 
-/*#santaBack{
-	mix-blend-mode: multiply;
-}
-*/
-
-
-.elemFlipped {
-	backface-visibility: hidden;
-	opacity:0;
-
-	animation: flipElem 0.5s ease-in 0s ;
-	animation-fill-mode: forwards;
-	transform-origin: 25% 50%;
-}
-
-#pom, #pomBack{
-	animation-delay: 0.4s; 
-}
-#hat, #hatBack{
-	animation-delay: 0.5s; 
-}
-#fur, #furBack{
-	animation-delay: 0.6s; 
-}
-#eyes, #eyesBack{
-	animation-delay: 0.7s; 
-}
-#mustache, #mustacheBack{
-	animation-delay: 0.8s; 
-}
-#smile, #smileBack{
-	animation-delay: 0.9s; 
-}
-#beard, #beardBack{
-	animation-delay: 1.0s; 
-}
-
-
-@keyframes flipElem {
-	0% { transform: scaleX(1); opacity:0;}
-	50% { transform: scaleX(-1); opacity:100; fill: white;}
-	75% { transform: scaleX(0); fill: grey; opacity:100;}
-	100% { transform: scaleX(1); opacity:100;}	
-}
-
-.flipper{
-	animation: rotateSanta 0.5s ease-in 1.5s ;
-	animation-fill-mode: forwards;	
-}
-@keyframes rotateSanta {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(90deg);}
-}
-
-#leftEyeBlinking{
-opacity: 0;
-	animation: blinkEye 0.5s linear 2.3s ;
-	animation-fill-mode: backwards;	
-}
-
-
-@keyframes blinkEye {
-	0% {opacity: 0;}
-	15% {opacity: 100;}
-	85% {opacity: 100;}
-	100% {opacity: 0;}
-}
-
-.joyeusesFetes{
-	animation: santaToGreetings 0.8s ease-out 2.8s ;
-	animation-fill-mode: forwards;	
-	transform-origin: 38% 60%;
-}
-
-@keyframes santaToGreetings {
-	100% {transform: translate(0,-100vh);}
-}
-
-#textFront{
-	margin: auto;
-	animation: shadows2 0.8s ease-out 2.8s ;
-	animation-fill-mode: forwards;	
-	transform-origin: 50% 50%;
-/*	animation-fill-mode: forwards;	
-	*/
-}
-@keyframes shadows2 {
-	0% { transform: rotate(0deg);}
-	100% { transform:  rotate(-20deg);}
-}
-#textBack{
-	margin: auto;
-
-	animation: shadows 0.8s ease-out 2.8s ;
-	mix-blend-mode: multiply;
-	animation-fill-mode: forwards;	
-	transform-origin: 50% 50%;
-
-/*	animation-fill-mode: forwards;	
-	transform-origin: 50% 50%;*/
-}
-@keyframes shadows {
-	0% {opacity: 0; transform: scale(1) rotate(0deg);}
-	100% {opacity: 0.2; transform: scale(1.03) rotate(-20deg);}
-}
