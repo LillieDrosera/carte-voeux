@@ -1,6 +1,15 @@
+
 @font-face {
-  font-family: "PixelOperatorMono-Bold";
-  src: url("font/PixelOperatorMono-Bold.ttf");
+    font-family: 'pixel_operator_monobold';
+    src: url('font/pixeloperatormono-bold.eot');
+    src: url('font/pixeloperatormono-bold.eot?#iefix') format('embedded-opentype'),
+         url('font/pixeloperatormono-bold.woff2') format('woff2'),
+         url('font/pixeloperatormono-bold.woff') format('woff'),
+         url('font/pixeloperatormono-bold.ttf') format('truetype'),
+         url('font/pixeloperatormono-bold.svg#pixel_operator_monobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 *{
@@ -8,7 +17,7 @@
 	margin: 0;
 }
 body{
-	font-family: "PixelOperatorMono-Bold";
+	font-family: "pixel_operator_monobold";
 	overflow: hidden;
 	position: relative;
 }
@@ -31,6 +40,14 @@ body{
 }
 
 
+#text1{
+	font-family: "pixel_operator_monobold";
+
+    width: 100vw;
+    height: 100vh;
+}
+
+
 #slide2{
 	background-color: #3fa9f5;
 	top: 0;
@@ -39,17 +56,14 @@ body{
 
 }
 
-#text1{
-    width: 100vw;
-    height: 100vh;
-}
 
 #slide2 .text2{
-	font-family: "PixelOperatorMono-Bold";
-	font-size: 8em;
+	font-family: "pixel_operator_monobold";
+	font-size: 10em;
 	color: #fff;
 	margin: auto;
 	text-align: right;
+	margin-right: 0.8em;
 }
 
 #slide3{
@@ -66,12 +80,10 @@ body{
 	top: 100vh;
 	left:0;
 	z-index: 40;
-
 }
 
-
 #slide1 text{
-	font-family: "PixelOperatorMono-Bold";
+	font-family: "pixel_operator_monobold";
 	font-size: 200;
 	 
 }
@@ -100,9 +112,5 @@ form{
 	fill:#fff;
 	width: 50%;
 	
-}
-
-.fb-share-button{
-
 }
 

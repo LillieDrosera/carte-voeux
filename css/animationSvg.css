@@ -99,10 +99,6 @@
 .flipper{
 	animation: rotateSanta 0.5s ease-in 5.5s ;
 	animation-fill-mode: forwards;		
-/*	
-	transform-origin: 50% 50%;
-	top: 100vh;
-	left: 0;*/
 }
 @keyframes rotateSanta {
 	0% { transform: rotate(0deg); }
@@ -123,24 +119,11 @@
 	100% {opacity: 0;}
 }
 
-/*.joyeusesFetes{
-	position: relative;
-	animation: santaToGreetings 0.8s ease-out 4.8s ;
-	animation-fill-mode: forwards;	
-	transform-origin: 38% 60%;
-}
-
-@keyframes santaToGreetings {
-	100% {transform: translate(0,-110vh);}
-}
-*/
 #textFront{
 	margin: auto;
 	animation: shadows2 0.8s ease-out 2.8s ;
 	animation-fill-mode: forwards;	
 	transform-origin: 50% 50%;
-/*	animation-fill-mode: forwards;	
-	*/
 }
 @keyframes shadows2 {
 	0% { transform: rotate(0deg);}
@@ -161,3 +144,4 @@
 	0% {opacity: 0; transform: scale(1) rotate(0deg);}
 	100% {opacity: 0.2; transform: scale(1.03) rotate(-20deg);}
 }
+
