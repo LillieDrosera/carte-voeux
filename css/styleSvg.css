@@ -46,6 +46,14 @@ body{
 
 }
 
+#slide2 .text2{
+	font-family: "PixelOperatorMono-Bold";
+	font-size: 8em;
+	color: #fff;
+	vertical-align: middle;
+	text-align: right;
+}
+
 #slide3{
 	background-color: #ff931e;
 	top: 100vh;
