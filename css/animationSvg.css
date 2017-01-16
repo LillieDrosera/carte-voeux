@@ -3,28 +3,28 @@
 #slide2{
 	animation-name: translationX;
 	animation-timing-function: ease-in-out;
-	animation-duration: 1.5s;
-	animation-delay: 3s;
+	animation-duration: 0.5s;
+	animation-delay: 2s;
 	animation-fill-mode: forwards;
 }
 
 @keyframes translationX{
- 0%{	left:100vw; 			}
+ 0%{	left:100vw; 	}
  100%{	left:0; 		}
 }
 
 #slide3{
 	animation-name: translationY;
 	animation-timing-function: ease-in-out;
-	animation-duration: 2.5s;
-	animation-delay: 5s;
+	animation-duration: 0.5s;
+	animation-delay: 4s;
 	animation-fill-mode: forwards;
 }
 #slide4{
 	animation-name: translationY;
 	animation-timing-function: ease-in-out;
-	animation-duration: 2.5s;
-	animation-delay: 10s;
+	animation-duration: 0.5s;
+	animation-delay: 7.6s;
 	animation-fill-mode: forwards;
 }
 
@@ -36,55 +36,56 @@
 
 /* ANIMATION DES ELEMENTS =============================================================*/
 #gedn-logo {
-   width: 50vw;
-   height: 40vh;
-   position: absolute;
-   animation-name: logo-move;
-   animation-duration: 1s;
-   animation-fill-mode: forwards;
+    width: 60vw;
+    height: 50vh;
+    position: absolute;
+    animation-name: logo-move;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes logo-move {
-   0% {
-       transform: translateX(200%);
-   }
-   50% {
-       transform: translateX(120%);
-   }
-   100% {
-       transform: translate(120%, 130%);
-   }
+    0% {
+        transform: translateX(200%);
+    }
+    50% {
+        transform: translateX(85%);
+    }
+    100% {
+        transform: translate(85%, 80%);
+    }
 }
+
 
 .elemFlipped {
 	backface-visibility: hidden;
 	opacity:0;
 
-	animation: flipElem 0.5s ease-in 2s ;
+	animation: flipElem 0.5s ease-in 4s ;
 	animation-fill-mode: forwards;
 	transform-origin: 25% 50%;
 }
 
 #pom, #pomBack{
-	animation-delay: 2.4s; 
+	animation-delay: 4.4s; 
 }
 #hat, #hatBack{
-	animation-delay: 2.5s; 
+	animation-delay: 4.5s; 
 }
 #fur, #furBack{
-	animation-delay: 2.6s; 
+	animation-delay: 4.6s; 
 }
 #eyes, #eyesBack{
-	animation-delay: 2.7s; 
+	animation-delay: 4.7s; 
 }
 #nose, #noseBack{
-	animation-delay: 2.8s; 
+	animation-delay: 4.8s; 
 }
 #smile, #smileBack{
-	animation-delay: 2.9s; 
+	animation-delay: 4.9s; 
 }
 #beard, #beardBack{
-	animation-delay: 3.0s; 
+	animation-delay: 5.0s; 
 }
 
 
@@ -96,8 +97,12 @@
 }
 
 .flipper{
-	animation: rotateSanta 0.5s ease-in 3.5s ;
-	animation-fill-mode: forwards;	
+	animation: rotateSanta 0.5s ease-in 5.5s ;
+	animation-fill-mode: forwards;		
+/*	
+	transform-origin: 50% 50%;
+	top: 100vh;
+	left: 0;*/
 }
 @keyframes rotateSanta {
 	0% { transform: rotate(0deg); }
@@ -105,8 +110,8 @@
 }
 
 #leftEyeBlinking{
-opacity: 0;
-	animation: blinkEye 0.5s linear 2.3s ;
+	opacity: 0;
+	animation: blinkEye 0.5s linear 6.3s ;
 	animation-fill-mode: backwards;	
 }
 
@@ -118,7 +123,7 @@ opacity: 0;
 	100% {opacity: 0;}
 }
 
-.joyeusesFetes{
+/*.joyeusesFetes{
 	position: relative;
 	animation: santaToGreetings 0.8s ease-out 4.8s ;
 	animation-fill-mode: forwards;	
@@ -128,7 +133,7 @@ opacity: 0;
 @keyframes santaToGreetings {
 	100% {transform: translate(0,-110vh);}
 }
-
+*/
 #textFront{
 	margin: auto;
 	animation: shadows2 0.8s ease-out 2.8s ;

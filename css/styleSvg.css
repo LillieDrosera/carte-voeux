@@ -27,9 +27,7 @@ body{
 	top: 0;
 	left: 0;
 	z-index: 10;
-	/*animation: transitionAB 1s ease-out 2.5s ;
-	animation-fill-mode: forwards;	
-	transform-origin: 50% 50%;*/
+
 }
 
 
@@ -39,18 +37,18 @@ body{
 	left: 100vw;
 	z-index: 20;
 
+}
 
-/*	animation: transitionBC 1s ease-out 2s ;
-	animation-fill-mode: forwards;	
-	transform-origin: 50% 50%;*/
-
+#text1{
+    width: 100vw;
+    height: 100vh;
 }
 
 #slide2 .text2{
 	font-family: "PixelOperatorMono-Bold";
 	font-size: 8em;
 	color: #fff;
-	vertical-align: middle;
+	margin: auto;
 	text-align: right;
 }
 
@@ -79,8 +77,8 @@ body{
 }
 
 .flipper {
+	z-index: 31;
 	height:100vh;
-	transform-origin: 50% 50%;
 }
 
 svg{
@@ -93,13 +91,18 @@ form{
 	height: 5vh;
 }
 
-#text1{
+#slide4 img{
+	height: 100%;
 
 }
 
-#santa{
+#perso{
 	fill:#fff;
 	width: 50%;
 	
+}
+
+.fb-share-button{
+
 }
 
